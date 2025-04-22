@@ -3,6 +3,7 @@ import Home from "./pages/Home";
 import Post from "./pages/Post";
 import ChiSiamo from "./pages/ChiSiamo";
 import Layout from "./layout/Layout";
+import DettagliPost from "./pages/DettagliPost";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/chi-siamo" element={<ChiSiamo />} />
             <Route path="/post" element={<Post />} />
+            <Route path="/post/:id" element={<DettagliPost />} />
           </Route>
         </Routes>
       </BrowserRouter>

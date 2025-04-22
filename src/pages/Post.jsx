@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 //AXIOS
 import axios from "axios";
+import { Link } from "react-router-dom";
 
 export default function post() {
   const [posts, setPosts] = useState([]);
@@ -22,6 +23,7 @@ export default function post() {
         <div key={post.id}>
           <h2>{post.title}</h2>
           <p>Dettaglio {post.id}</p>
+          <Link to={`/post/${post.id}`}>Leggi di più</Link>
         </div>
       ))}
     </>
